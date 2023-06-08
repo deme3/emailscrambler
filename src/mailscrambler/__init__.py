@@ -1,0 +1,1 @@
+from .mailscrambler import scramble, unscramble, rot, obfuscate, javascriptify, deobfuscator
