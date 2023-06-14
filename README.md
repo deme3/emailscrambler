@@ -35,6 +35,12 @@ link = javascriptify('test@email.com', do_scramble=True)
 """
 <script type="text/javascript">document.write('<a href="mailto:&#x67;&#x72;&#x66;&#x67;&#x40;&#x72;&#x7a;&#x6e;&#x76;&#x79;&#x2e;&#x70;&#x62;&#x7a;" data-scrambled>&#x67;&#x72;&#x66;&#x67;&#x40;&#x72;&#x7a;&#x6e;&#x76;&#x79;&#x2e;&#x70;&#x62;&#x7a;</a>');</script>
 """
+
+# "Click <here> to report your issue":
+support_email = javascriptify('support@test.com', body='Name: \nProduct you encountered the issue with: \nYour issue:\n', custom_caption='here', do_scramble=True)
+"""
+Click {support_email} to report your issue
+<script type="text/javascript">document.write('<a href="mailto:&#x66;&#x68;&#x63;&#x63;&#x62;&#x65;&#x67;&#x40;&#x67;&#x72;&#x66;&#x67;&#x2e;&#x70;&#x62;&#x7a;" data-scrambled data-body="&#x41;&#x6e;&#x7a;&#x72;&#x3a;&#x20;&#x25;&#x35;&#x51;&#x25;&#x35;&#x4e;&#x43;&#x65;&#x62;&#x71;&#x68;&#x70;&#x67;&#x20;&#x6c;&#x62;&#x68;&#x20;&#x72;&#x61;&#x70;&#x62;&#x68;&#x61;&#x67;&#x72;&#x65;&#x72;&#x71;&#x20;&#x67;&#x75;&#x72;&#x20;&#x76;&#x66;&#x66;&#x68;&#x72;&#x20;&#x6a;&#x76;&#x67;&#x75;&#x3a;&#x20;&#x25;&#x35;&#x51;&#x25;&#x35;&#x4e;&#x4c;&#x62;&#x68;&#x65;&#x20;&#x76;&#x66;&#x66;&#x68;&#x72;&#x3a;&#x25;&#x35;&#x51;&#x25;&#x35;&#x4e;" data-custom-caption="&#x75;&#x72;&#x65;&#x72;">&#x66;&#x68;&#x63;&#x63;&#x62;&#x65;&#x67;&#x40;&#x67;&#x72;&#x66;&#x67;&#x2e;&#x70;&#x62;&#x7a;</a>');</script>
 ```
 
 To embed a deobfuscator in your HTML page, you can call the `deobfuscator` function:
