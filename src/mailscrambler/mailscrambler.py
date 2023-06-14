@@ -67,7 +67,7 @@ def javascriptify(emailto: str, custom_caption: str = None, body: str = None, do
   caption = (obfuscate(scramble(custom_caption)) if custom_caption else obfuscate(emailto)) if custom_caption else None
   mail_output = obfuscate(scramble(emailto)) if do_scramble else obfuscate(emailto)
   mail_body = (obfuscate(scramble(body)) if do_scramble else obfuscate(body)) if body else None
-  return '<script type="text/javascript">document.write(\'<a href="mailto:' + mail_output + '"' + (" data-scrambled" if do_scramble else "") + (f" data-body=\"{mail_body}\"" if body else None) + (f" data-custom-caption=\"{caption}\"" if custom_caption else '') + '>' + mail_output + '</a>\');</script>'
+  return '<script type="text/javascript">document.write(\'<a href="mailto:' + mail_output + '"' + (" data-scrambled" if do_scramble else "") + (f" data-body=\"{mail_body}\"" if body else "") + (f" data-custom-caption=\"{caption}\"" if custom_caption else '') + '>' + mail_output + '</a>\');</script>'
 
 def deobfuscator() -> str:
   """
